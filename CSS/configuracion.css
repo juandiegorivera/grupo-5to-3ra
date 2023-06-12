@@ -1,0 +1,34 @@
+
+body{
+    text-align: center;
+    background: #000000;
+    padding-top: 150px;
+}
+.boton {
+    background-image: -webkit-linear-gradient(top, #000000, #000000);
+    background-image: linear-gradient(to bottom, #ff0000, #000000);/*primero degrade del boton y el segundo como termina el degrade */ 
+    border-radius: 10px; /*borde del boton*/
+    text-shadow: 20px #ffffff;
+    box-shadow: 3px 3px 3px 3px #980000; /* color y tamaño de la luz de fondo*/
+    font-family: Arial;
+    color: #ffffff; /* color de las letras*/  
+    padding: 10px 10px 10px 10px; /*top,bottom,left,right para donde se estira*/
+    text-decoration: none;
+    font-size: 25px; /* tamaño de las letras*/
+    display: inline-block;
+    margin: 0px 0px 20px 20px;
+}
+.boton:hover {
+    background-image: -webkit-linear-gradient(top, #000000, #000000);
+    background-image: linear-gradient(to bottom, #000000,#ff0000);
+    text-decoration: none;
+    }
+.letra{
+    text-align: center;
+    -webkit-text-stroke: 1px #ff0000;
+    text-shadow:0 0 0.6em #ff0000, 0 0 0.6em #ff0000;/* color de la luz*/
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: 900;
+    margin: 5px;
+}
