@@ -1,52 +1,51 @@
 body{
     text-align: center;
     background: #000000;
-    padding: 100px 200px 100px 100px;   
 }
 .boton {
     text-align: center;
     background-image: -webkit-linear-gradient(top, #000000, #000000);
     background-image: linear-gradient(to bottom, #ff0000, #000000);/*primero degrade del boton y el segundo como termina el degrade */ 
-    border-radius: 10px;/*borde del boton*/
+    border-radius: 15px;/*borde del boton*/
     box-shadow: 3px 3px 3px 3px #980000; /* color y tamaño de la luz de fondo*/
     font-family: monospace;
     color: #ffffff; /* color de las letras*/  
-    padding: 7px 7px 7px 7px; /*top,bottom,left,right para donde se estira*/
+    padding: 8px; /*top,bottom,left,right para donde se estira*/
     text-decoration: none;
-    font-size: 20px; /* tamaño de las letras*/
+    font-size: 30px; /* tamaño de las letras*/
     display: inline-block;/*espacios*/
     margin: 5px 5px;
     border: 0px solid #666; /* color y proporcion para el borde del boton */
+    
 }
 .boton:hover {
     background-image: -webkit-linear-gradient(top, #000000, #000000);
     background-image: linear-gradient(to bottom, #000000,#ff0000);
     text-decoration: none;
     }
-.posiciond{
-    position:absolute;
-    top: 40px;
-    left: 900px;
+.target {
+    transition-property: font-size;
+    transition-duration: 1s;
 }
-.posicioni{
-    position:absolute;
-    top: 390px;
-    right: 900px;
+
+.target:hover {
+    font-size: 40px;
 }
-.tablero{
-    position: absolute;
-    height: 350px;
-    width: 700px;
-    top: 20px;
-    right: 270px;
+
+
+
+div {
+    position: relative;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    top: 50px;
 }
-.j1{
-    position: absolute;
-    top: 105px;
-    left: 20px;
-}
-.j2{
-    position: absolute;
-    top: 105px;
-    right: 20px;
+
+@keyframes myAnim {
+	0% {
+		transform: translateX(1000px);
+	}
+
+	100% {
+		transform: translateX(0px);
+	}
 }

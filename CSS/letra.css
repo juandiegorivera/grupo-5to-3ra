@@ -1,7 +1,7 @@
-
+@import "https://unpkg.com/transition-style";
 
 body {
-background: black;
+background: rgb(0, 0, 0);
 }
 
 .letra{
@@ -9,7 +9,9 @@ background: black;
     -webkit-text-stroke: 2px rgb(255, 0, 0);
     text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
     font-size: 80px;
+    color: white;
     font-family: monospace;
     font-weight: 900;
     margin: 5px;
 }
+
