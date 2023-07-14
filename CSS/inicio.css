@@ -1,7 +1,22 @@
-body{
+
+@import "https://unpkg.com/transition-style";
+
+
+html {
+    height: 100%;
+}
+body {
+    cursor: grab;
     text-align: center;
     background: #000000;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 0.5em ), repeating-linear-gradient( #25252555, #252525 );
 }
+
+
+
+
+
 .boton {
     text-align: center;
     background-image: -webkit-linear-gradient(top, #000000, #000000);
@@ -12,11 +27,10 @@ body{
     color: #ffffff; /* color de las letras*/  
     padding: 8px; /*top,bottom,left,right para donde se estira*/
     text-decoration: none;
-    font-size: 30px; /* tamaño de las letras*/
+    font-size: 2.5em; /* tamaño de las letras*/
     display: inline-block;/*espacios*/
-    margin: 5px 5px;
+    margin: 0.2em;
     border: 0px solid #666; /* color y proporcion para el borde del boton */
-    
 }
 .boton:hover {
     background-image: -webkit-linear-gradient(top, #000000, #000000);
@@ -29,23 +43,34 @@ body{
 }
 
 .target:hover {
-    font-size: 40px;
+    font-size: 3.5em;
 }
-
-
 
 div {
     position: relative;
     animation: myAnim 2s ease 0s 1 normal forwards;
-    top: 50px;
+    top: -2em;
+    left: 30em;
 }
 
 @keyframes myAnim {
 	0% {
-		transform: translateX(1000px);
+		transform: translateX(80em);
 	}
 
 	100% {
-		transform: translateX(0px);
+		transform: translateX(-30em);
 	}
 }
+
+
+
+.letra{
+    position: relative;
+    top: -0.5em;
+    text-align: center;
+    -webkit-text-stroke: 2px rgb(255, 0, 0);
+    text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
+    font-size: 5em;
+}
+

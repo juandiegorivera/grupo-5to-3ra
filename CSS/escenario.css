@@ -1,8 +1,8 @@
 body{
-    text-align: center;
     background: #000000;
+    cursor: grab;
 }
-
+@import "https://unpkg.com/transition-style";
 
 .j1{
     text-align: center;

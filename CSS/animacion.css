@@ -1,137 +1,365 @@
+html {
+    height: 100%;
+}
 body {
-    background-color: #000;
+    background: #000000;
+    min-height: 100%;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 0.5em ), repeating-linear-gradient( #25252555, #252525 );
+
+
 }
 
-
+div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: block;
+    margin: 1em;
+}
+.caja{
+    width: 40vw;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 25%;
+    top: 35%;
+}
 
 @import "https://unpkg.com/transition-style";
 
 .letra{
     text-align: center;
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgb(255, 0, 0);
     text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
-    font-size: 40px;
-    color: rgb(0, 0, 0);
-    font-family: monospace;
-    font-weight: 900;
-    margin: 5px;
+    font-size: 5em;
 }
 
 
 .letra1 {
-    position: relative;
-    animation: letra1 2s ease 0s 1 normal forwards;
-    top: 50px;
-    
+    position: absolute;
+    animation-name: letra1;
+    animation-duration: 7.2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @keyframes letra1 {
 0% {
-    transform: translateX(1000px);
+    transform: translateX(125em);
+}
+
+20% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
 }
 
 100% {
-    transform: translateX(0px);
+    transform: translateX(-2.35em);
 }
 }
 
 .letra2 {
-    position: relative;
-    animation: letra2 2.1s ease 0s 1 normal forwards;
-    top: 50px;
-    
+    position: absolute;
+    animation-name: letra2;
+    animation-duration: 7.3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @keyframes letra2 {
 0% {
-    transform: translateX(1000px);
+    transform: translateX(125em);
+}
+
+25% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
 }
 
 100% {
-    transform: translateX(0px);
+    transform: translateX(-1.85em);
 }
 }
 
 .letra3 {
-    position: relative;
-    animation: letra3 2.2s ease 0s 1 normal forwards;
-    top: 50px;
-    
+    position: absolute;
+    animation-name: letra3;
+    animation-duration: 7.4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @keyframes letra3 {
 0% {
-    transform: translateX(1000px);
+    transform: translateX(125em);
+}
+
+30% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
 }
 
 100% {
-    transform: translateX(0px);
+    transform: translateX(-1.25em);
 }
 }
 
 .letra4 {
-    position: relative;
-    animation: letra4 2.3s ease 0s 1 normal forwards;
-    top: 50px;
-    
+    position: absolute;
+    animation-name: letra4;
+    animation-duration: 7.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
+
+
 
 @keyframes letra4 {
 0% {
-    transform: translateX(1000px);
+    transform: translateX(125em);
+}
+
+35% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
 }
 
 100% {
-    transform: translateX(0px);
+    transform: translateX(-0.55em);
 }
 }
 
+
+
 .letra5 {
-    position: relative;
-    animation: letra5 2.4s ease 0s 1 normal forwards;
-    top: 50px;
-    
+    position: absolute;
+    animation-name: letra5;
+    animation-duration: 7.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @keyframes letra5 {
 0% {
-    transform: translateX(1000px);
+    transform: translateX(125em);
+}
+
+40% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
 }
 
 100% {
-    transform: translateX(0px);
+    transform: translateX(0.25em);
 }
 }
 
-.letra5 {
-    position: relative;
-    animation: letra5 2.5s ease 0s 1 normal forwards;
-    top: 50px;
-    
-}
-
-@keyframes letra5 {
-0% {
-    transform: translateX(1000px);
-}  
-100% {
-    transform: translateX(0px);
-}
-}
 
 .letra6 {
-    position: relative;
-    animation: letra6 2.6s ease 0s 1 normal forwards;
-    top: 50px;
-    
+    position: absolute;
+    animation-name: letra6;
+    animation-duration: 7.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
 @keyframes letra6 {
 0% {
-    transform: translateX(1000px);
+    transform: translateX(125em);
+}
+
+45% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
 }
 
 100% {
-    transform: translateX(0px);
+    transform: translateX(1em);
 }
 }
+
+.letra7 {
+    position: absolute;
+    animation-name: letra7;
+    animation-duration: 7.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letra7 {
+0% {
+    transform: translateX(125em);
+}
+
+50% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
+}
+
+100% {
+    transform: translateX(1.7em);
+}
+}
+
+.letra8 {
+    position: absolute;
+    animation-name: letra8;
+    animation-duration: 7.6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letra8 {
+0% {
+    transform: translateX(125em);
+}
+
+55% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
+}
+
+100% {
+    transform: translateX(2.3em);
+}
+}
+
+.letra9 {
+    position: absolute;
+    animation-name: letra9;
+    animation-duration: 7.7s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letra9 {
+0% {
+    transform: translateX(125em);
+}
+
+60% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
+}
+
+100% {
+    transform: translateX(2.9em);
+}
+}
+
+.letra10 {
+    position: absolute;
+    animation-name: letra10;
+    animation-duration: 7.8s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letra10 {
+0% {
+    transform: translateX(125em);
+}
+
+65% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
+}
+
+100% {
+    transform: translateX(3.65em);
+}
+}
+
+.letra11 {
+    position: absolute;
+    animation: letra11 7.9s ease 0s 1 normal forwards;
+    animation-name: letra11;
+    animation-duration: 7.9s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letra11 {
+0% {
+    transform: translateX(125em);
+}
+
+70% {
+    transform: translateX(1em);
+}
+
+75% {
+    transform: translateX(1em);
+}
+
+100% {
+    transform: translateX(4.3em);
+}
+}
+
