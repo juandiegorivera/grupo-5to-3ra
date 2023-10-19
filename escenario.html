@@ -1,20 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>escenario</title>
     <link rel="stylesheet" href="CSS/escenario.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
+    <div class="grid-container">
+        <header id="jugadores">
+            <div class="letra">JUGADOR 1</div>
+            <div class="puntos letra">1-1</div>
+            <div class="letra">JUGADOR 2</div>
+        </header>
 
-<div class="tablero">
-    <img src="imagenes/escenario.png" alt="" height="380" width="700">
-    <img class="j1" src="imagenes/palo.png" alt="" height="80" width="12">
-    <img class="j2" src="imagenes/palo.png" alt="" height="80" width="12">
-</div>
+        <article class="box">
+            <div id="cajagrande">
+                <div class="j1"></div>
+                <div class="separacion">
+                    <div class="palitos"></div>
+                    <div class="palitos"></div>
+                    <div class="palitos"></div>
+                    <div class="palitos"></div>
+                    <div class="palitos"></div>
+                    <div class="palitos"></div>
+                    <div class="palitos"></div>
+                </div>
+                <div class="j2"></div>
+            </div>
+    </article>
+        
+            <div class="scroll-div">
+                <div class="scroll-object">
+                        <a href="inicio.html" class="boton target">salir al menú</a>
+                        <br>
+                        <br>
+                        <a href="titulos.html" class="boton target">creditos</a>
+                        <br>
+                        <br>
+                    <div class="cajaotros" >
+                        <div id="remarcar">
+                            <h2>accesibilidad</h2>
+                            <div id="tipos">
+                                <div>
+                                    <input type="radio" name="tipos" id="deu">
+                                    <label class="dalt" for="deu">deuteranomalia</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" name="tipos" id="pro">
+                                    <label class="dalt" for="pro">protanomalia</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" name="tipos" id="prot">
+                                    <label class="dalt" for="prot">protanopia</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="remarcar">
+                            <h2>puntos para ganar</h2>
+                            <div>
+                                <input type="radio" name="puntos" id="cinco">
+                                <label class="dalt" for="cinco">5</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" name="puntos" id="diez">
+                                <label class="dalt" for="quince">10</label>
+                            </div>
+                            
+                            <div>
+                                <input type="radio" name="puntos" id="quince">
+                                <label class="dalt" for="diez">15</label>
+                            </div>
+    
+                            <div>
+                                <input type="radio" name="puntos" id="veinte">
+                                <label class="dalt" for="veinte">20</label>
+                            </div>
+                        </div>
+    
+                        <div id="remarcar">
+                            <h2>volumen</h2>
+                            <label for="deu" class="volumenes">efectos de sonido</label> </br>
+                            <input type="range"></br>
+                            <label for="deu" class="volumenes">musica</label> </br>
+                            <input type="range">
+                        </div>
+                        <div id="remarcar2">
+                            <h2>brillo</h2>
+                            <label for="deu" class="volumenes"></label> </br>
+                            <input type="range">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="controles" class="letra">
+            <div id="marcar"><h1>W:arriba</h1></div>
+            <div id="marcar"><h1>S:abajo</h1></div>
+            <div id="marcar"><h1>↑:arriba</h1></div>
+            <div id="marcar"><h1>↓:abajo</h1></div>
+        </footer>
 
-
+    </div>
+<script src="JS/escenario.js"></script>
 </body>
 </html>

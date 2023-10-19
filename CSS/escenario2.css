@@ -1,0 +1,195 @@
+@import "https://unpkg.com/transition-style";
+html {
+    height: 100%;
+}
+body {
+    cursor: grab;
+    text-align: center;
+    background: #000000;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 0.5em ), repeating-linear-gradient( #25252555, #252525 );
+    font-size: 100%;
+    overflow: hidden;
+}
+
+header,article,aside,footer{
+    border: 0px solid white;
+}
+
+header { 
+    position: relative;
+    grid-area: header;
+    left: 25%;
+    width: 73.5vw;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4em;
+}
+
+aside { 
+    position: relative;
+    grid-area: side;
+    width: 24.5vw;
+}
+#botones{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+article { 
+    grid-area: content; 
+    position: relative;
+    width: 73.5vw;
+    height: 78vh;
+}
+#juego{
+    animation: myAnim 2s linear 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		transform: scaleX(0.1);
+	}
+
+	100% {
+		transform: scaleX(1);
+	}
+}
+
+footer { 
+    left: 25%;
+    width: 73.5vw;
+    grid-area: footer; 
+    position: relative;
+    display: flex;
+    height: 10vh;
+}
+
+#marcar{
+    width: 25%;
+    position: relative;
+    top: -1em;
+}
+
+.grid-container {
+    position: absolute;
+    border: 1px solid white;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 98vw;
+    height: 98vh;
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'side content content'
+    'footer footer footer';
+}
+
+#tablero{
+    position: relative;
+    width: 98%;
+    height: 100%;
+    top: 1em;
+    left: 0em;
+}
+
+#j1,#j2{
+    position: absolute;
+    height:80px;
+    width:12px;
+}
+
+
+#j2{
+    top: 15%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+}
+
+
+#j1{
+    top: 85%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+}
+
+.letra{
+    text-align: center;
+    -webkit-text-stroke: 1px rgb(255, 0, 0);
+    text-shadow:0 0 0.4em rgb(255, 0, 0), 0 0 0.4em rgb(255, 0, 0);/* color de la luz*/
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+
+.box{
+    position: relative;
+    background: repeating-conic-gradient(from var(--a), #ff0000 80%, #4e0000 90%, transparent 5%,
+    transparent 70%,#b60000 100%);
+    animation: animate 4s linear infinite;
+}
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate{
+    0%{
+        --a: 0deg;
+    }
+
+    100%{
+        --a: 360deg;
+    }
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #ff0000 80%, #4e0000 90%, transparent 5%,
+    transparent 70%,#b60000 100%);
+    animation: animate 4s linear infinite;
+    animation-delay: 1s;
+}
+
+.boton {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: -webkit-linear-gradient(top, #000000, #000000);
+    background-image: linear-gradient(to bottom, #ff0000, #000000);/*primero degrade del boton y el segundo como termina el degrade */ 
+    border-radius: 15px;/*borde del boton*/
+    box-shadow: 3px 3px 3px 3px #980000; /* color y tamaño de la luz de fondo*/
+    font-family: monospace;
+    color: #ffffff; /* color de las letras*/  
+    padding: 8px; /*top,bottom,left,right para donde se estira*/
+    text-decoration: none;
+    font-size: 1.5em; /* tamaño de las letras*/
+    display: inline-block;/*espacios*/
+    margin: 2px 2px;
+    border: 0px solid #666; /* color y proporcion para el borde del boton */
+}
+.boton:hover {
+    background-image: -webkit-linear-gradient(top, #000000, #000000);
+    background-image: linear-gradient(to bottom, #000000,#ff0000);
+    text-decoration: none;
+    }
+.target {
+    transition-property: font-size;
+    transition-duration: 1s;
+}
+
+.target:hover {
+    font-size: 2.3em;
+}
+
+

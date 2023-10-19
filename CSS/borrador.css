@@ -1,0 +1,21 @@
+#pane {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid red;
+    margin: 0 auto;
+}
+
+#box {
+    position: absolute;
+    top: 140px;
+    left: 140px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+b {
+    text-align: center;
+    display: block;
+}

@@ -1,21 +1,19 @@
 html {
     height: 100%;
 }
+
 body {
     background: #000000;
-    min-height: 100%;
+    max-height: 100%;
     opacity: 1;
+    overflow: hidden;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 0.5em ), repeating-linear-gradient( #25252555, #252525 );
-
-
 }
 
 div{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    display: block;
-    margin: 1em;
+    margin: 0em;
 }
 .caja{
     width: 40vw;
@@ -24,15 +22,16 @@ div{
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
-    left: 25%;
-    top: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 @import "https://unpkg.com/transition-style";
 
 .letra{
     text-align: center;
-    -webkit-text-stroke: 2px rgb(255, 0, 0);
+    -webkit-text-stroke: 4px rgb(255, 0, 0);
     text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
     font-size: 5em;
 }
@@ -41,11 +40,11 @@ div{
 .letra1 {
     position: absolute;
     animation-name: letra1;
-    animation-duration: 7.2s;
+    animation-duration: 10.2s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -54,27 +53,31 @@ div{
     transform: translateX(125em);
 }
 
-20% {
-    transform: translateX(1em);
+25% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(-3.35em);
 }
 
 100% {
-    transform: translateX(-2.35em);
+    transform: translateX(-125em);
 }
 }
 
 .letra2 {
     position: absolute;
     animation-name: letra2;
-    animation-duration: 7.3s;
+    animation-duration: 10.3s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -83,27 +86,31 @@ div{
     transform: translateX(125em);
 }
 
-25% {
-    transform: translateX(1em);
+27% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(-2.85em);
 }
 
 100% {
-    transform: translateX(-1.85em);
+    transform: translateX(-125em);
 }
 }
 
 .letra3 {
     position: absolute;
     animation-name: letra3;
-    animation-duration: 7.4s;
+    animation-duration: 10.4s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -112,27 +119,31 @@ div{
     transform: translateX(125em);
 }
 
-30% {
-    transform: translateX(1em);
+29% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(-2.25em);
 }
 
 100% {
-    transform: translateX(-1.25em);
+    transform: translateX(-125em);
 }
 }
 
 .letra4 {
     position: absolute;
     animation-name: letra4;
-    animation-duration: 7.5s;
+    animation-duration: 10.5s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -143,29 +154,31 @@ div{
     transform: translateX(125em);
 }
 
-35% {
-    transform: translateX(1em);
+31% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(-1.55em);
 }
 
 100% {
-    transform: translateX(-0.55em);
+    transform: translateX(-125em);
 }
 }
-
-
 
 .letra5 {
     position: absolute;
     animation-name: letra5;
-    animation-duration: 7.5s;
+    animation-duration: 10.5s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -174,16 +187,20 @@ div{
     transform: translateX(125em);
 }
 
-40% {
-    transform: translateX(1em);
+33% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(-0.7em);
 }
 
 100% {
-    transform: translateX(0.25em);
+    transform: translateX(-125em);
 }
 }
 
@@ -191,11 +208,11 @@ div{
 .letra6 {
     position: absolute;
     animation-name: letra6;
-    animation-duration: 7.5s;
+    animation-duration: 10.5s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -204,27 +221,31 @@ div{
     transform: translateX(125em);
 }
 
-45% {
-    transform: translateX(1em);
+35% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(0em);
 }
 
 100% {
-    transform: translateX(1em);
+    transform: translateX(-125em);
 }
 }
 
 .letra7 {
     position: absolute;
     animation-name: letra7;
-    animation-duration: 7.5s;
+    animation-duration: 10.5s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -233,27 +254,31 @@ div{
     transform: translateX(125em);
 }
 
+37% {
+    transform: translateX(0em);
+}
+
 50% {
-    transform: translateX(1em);
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(0.7em);
 }
 
 100% {
-    transform: translateX(1.7em);
+    transform: translateX(-125em);
 }
 }
 
 .letra8 {
     position: absolute;
     animation-name: letra8;
-    animation-duration: 7.6s;
+    animation-duration: 10.6s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -262,27 +287,31 @@ div{
     transform: translateX(125em);
 }
 
-55% {
-    transform: translateX(1em);
+39% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(1.3em);
 }
 
 100% {
-    transform: translateX(2.3em);
+    transform: translateX(-125em);
 }
 }
 
 .letra9 {
     position: absolute;
     animation-name: letra9;
-    animation-duration: 7.7s;
+    animation-duration: 10.7s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -291,27 +320,31 @@ div{
     transform: translateX(125em);
 }
 
-60% {
-    transform: translateX(1em);
+41% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(1.9em);
 }
 
 100% {
-    transform: translateX(2.9em);
+    transform: translateX(-125em);
 }
 }
 
 .letra10 {
     position: absolute;
     animation-name: letra10;
-    animation-duration: 7.8s;
+    animation-duration: 10.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -320,16 +353,20 @@ div{
     transform: translateX(125em);
 }
 
-65% {
-    transform: translateX(1em);
+43% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(2.65em);
 }
 
 100% {
-    transform: translateX(3.65em);
+    transform: translateX(-125em);
 }
 }
 
@@ -337,11 +374,11 @@ div{
     position: absolute;
     animation: letra11 7.9s ease 0s 1 normal forwards;
     animation-name: letra11;
-    animation-duration: 7.9s;
+    animation-duration: 10.9s;
     animation-timing-function: ease;
     animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -350,16 +387,41 @@ div{
     transform: translateX(125em);
 }
 
-70% {
-    transform: translateX(1em);
+45% {
+    transform: translateX(0em);
+}
+
+50% {
+    transform: translateX(0em);
 }
 
 75% {
-    transform: translateX(1em);
+    transform: translateX(3.3em);
 }
 
 100% {
-    transform: translateX(4.3em);
+    transform: translateX(-125em);
 }
 }
 
+@media (max-width: 480px) {
+    .letra{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .letra{
+        font-size: 7em;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .letra{
+        font-size: 9em;
+    }
+}
