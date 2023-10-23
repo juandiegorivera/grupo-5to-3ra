@@ -2,6 +2,7 @@ body, html{
     height: 100%;
     background: #000;
 }
+/* facha de la bolita*/
 #ball{
     width: 20px;
     height: 20px;
@@ -13,6 +14,8 @@ body, html{
     border-radius: 10px;
 }
 
+
+/* apariencia de las paletas*/
 .bar{
     width: 20px;
     height: 100px;
@@ -20,16 +23,21 @@ body, html{
     border: 2px solid #fff;
 }
 
+/* ubicación de la paleta one*/
 #bar1{
     top: 20px;
     float: left; 
     position: absolute;
 }
+
+/* ubicación de la paleta 2 */
 #bar2{
     top: 20px;
     right:0px;
     position: absolute;
 }
+
+/* ubicación de la linea punteada*/
 #line{
     width:50%;
     border-right: #fff dashed 5px;

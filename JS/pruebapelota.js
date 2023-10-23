@@ -1,3 +1,4 @@
+/* Para que mentir , no tengo idea... */ 
 var game = function(){
     let time = 50;
     let movement = 20;

@@ -1,11 +1,14 @@
+/*fuente de "star wars"*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
+/* apariencia del body apenas comienza*/
 body {
 	margin: 0;
 	background-color: #000;
 	overflow: hidden !important;
 }
 
+/* body luego de arrancar la animación*/
 body::after {
 	content: "";
 	position: fixed;
@@ -22,6 +25,7 @@ body::after {
 	z-index: 1;
 }
 
+/* apariencia de las estrellas (la ubicación la otorga el js )*/
 .stars {
 	position: absolute;
 	width: 1px;
@@ -30,6 +34,7 @@ body::after {
 	z-index: 2;
 }
 
+/* posición/fuente/ubicación/apariencia de la frase de inicio*/
 .intro {
 	position: absolute;
 	top: 50%;
@@ -45,6 +50,7 @@ body::after {
 	animation: intro 6s ease-out 0.5s;
 }
 
+/* esa animación difumina hasta desaparecer la frase de inicio*/
 @keyframes intro {
 	0% {
 		opacity: 0;
@@ -60,6 +66,7 @@ body::after {
 	}
 }
 
+/* ubicación/tamaño y demas del "logo" */
 .logo {
 	position: absolute;
 	top: 50%;
@@ -71,10 +78,12 @@ body::after {
 	animation: logo 10s ease-out 9s;
 }
 
+/* aparición del logo/animación */
 .logo img {
 	width: inherit;
 }
 
+/* esta animación hace que aparexca la imagen antes mencionada y se aleje hasta desaparecer */
 @keyframes logo {
 	0% {
 		opacity: 1;
@@ -89,17 +98,19 @@ body::after {
 	}
 }
 
+/* color del texto*/
 p {
 	color: #ffe81f;
 }
 
+/* tamaño/posición y margen de cambio del scroll automatico*/
 #scroller {
 	font-family: sans-serif;
 	font-weight: bold;
 	font-size: 350%;
 	text-align: justify;
 	overflow: hidden;
-	height: 50em;
+	height: 70em;
 	width: 25em;
 	position: absolute;
 	bottom: 0;
@@ -110,6 +121,7 @@ p {
 	transform-origin: 50% 100%;
 }
 
+/* scroll automatico luego de que se empiece a mover*/
 #scroller::after {
 	position: absolute;
 	content: "";
@@ -119,12 +131,14 @@ p {
 	top: 0;
 }
 
+/* ubicación y animación de lacaja donde se almacena el texto*/
 #content {
 	position: absolute;
 	top: 100%;
 	animation: scoller 100s linear 16s;
 }
 
+/* animación con un error ortografico que si corrijo no funciona nada XD*/
 @keyframes scoller {
 	0% {
 		top: 100%;
@@ -134,32 +148,19 @@ p {
 	}
 }
 
+/* ubicación del titulo y subtitulo del juego  ☺*/
 #title,
 #subtitle {
 	text-align: center;
 	line-height: 1.5rem;
 }
 
+/* lo mismo con otro valor*/
 #subtitle {
 	text-transform: uppercase;
 	font-size: 3.5rem;
 }
 
-.imagen2 {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 2;
-	width: 100%;
-	opacity: 0;
-	animation: logo 10s ease-out 9s;
-}
-
-.imagen2 img {
-	width: inherit;
-}
-
 .audio{
-    display:flex;
+    display:none;
 }
