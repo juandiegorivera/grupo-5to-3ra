@@ -1,27 +1,4 @@
 
-p {
-    color: #ff0000;
-    margin: 20px;
-    margin-top: 20px;
-    font-family: monospace;
-    font-size: 20px;
-    display: inline-flex;
-}
-
-#img{
-    display: none;
-}
-
-#img2{
-    display: none;
-}
-
-#img3{
-    display: none;
-}
-
-
-
 html {
     max-height: 100%;
 }
@@ -38,6 +15,17 @@ body {
 
 header,article,aside,footer{
     border: 0px solid white;
+}
+
+#ball{
+    height: 2em;
+    width: 2em;
+    background: #000;
+    position:absolute;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    top: 45%;
+    left: 48%;
 }
 
 .vacio{

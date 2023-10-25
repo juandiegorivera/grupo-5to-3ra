@@ -93,8 +93,8 @@ var game = function(){
 
     function collidePlayer1(){
         if(ball.offsetLeft <= (bar1.clientWidth) &&
-           ball.offsetTop >= bar1.offsetTop &&
-           ball.offsetTop <= (bar1.offsetTop + bar1.clientHeight)){
+            ball.offsetTop >= bar1.offsetTop &&
+            ball.offsetTop <= (bar1.offsetTop + bar1.clientHeight)){
             return true;
         }
 
@@ -102,8 +102,8 @@ var game = function(){
     }
     function collidePlayer2(){
         if(ball.offsetLeft >= (width-bar2.clientWidth) &&
-           ball.offsetTop >= bar2.offsetTop &&
-           ball.offsetTop <= (bar2.offsetTop + bar2.clientHeight)){
+            ball.offsetTop >= bar2.offsetTop &&
+            ball.offsetTop <= (bar2.offsetTop + bar2.clientHeight)){
             return true;
         }
         return false;
@@ -142,12 +142,7 @@ var game = function(){
         }
     }
 
-    document.onkeyup = function(e){
-        if(e.keyCode == 81 || e.keyCode == 65)
-            player1.keyPress = false;
-        if(e.keyCode == 79 || e.keyCode == 76)
-            player2.keyPress = false;
-    }
+
 
     start();
 }();
