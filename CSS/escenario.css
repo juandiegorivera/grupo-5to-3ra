@@ -17,36 +17,67 @@ header,article,aside,footer{
     border: 0px solid white;
 }
 
-#ball{
-    height: 2em;
-    width: 2em;
-    background: #000;
-    position:absolute;
-    border: 2px solid #ff0000;
-    border-radius: 50%;
-    top: 45%;
-    left: 48%;
-}
-
 .vacio{
     position: relative;
-    width: 2.77vw;
-    height: 6.7vh;
+    width: 4.95vw;
+    height: 7vh;
+    border: 1px solid orangered;
 }
-/*width: 6.85vw;*/
 
+.puntoj1,.puntoj2{
+    position: relative;
+    width: 4.95vw;
+    height: 7vh;
+}
+
+.puntoj1{
+    border: 1px solid white;
+}
+
+.puntoj2{
+    border: 1px solid rgb(255, 0, 212);
+}
+
+/* width:72vw; height:73vh;*/
 .wall{
     position: relative;
     border: 1px solid white;
     width: 30px;
     height: 15px;
 }
+#puntos > div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-around ;
+}
+
+
+
+.botones{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: -webkit-linear-gradient(top, #000000, #000000);
+    background-image: linear-gradient(to bottom, #ff0000, #000000);/*primero degrade del boton y el segundo como termina el degrade */ 
+    border-radius: 10px;/*borde del boton*/
+    box-shadow: 3px #980000; /* color y tamaño de la luz de fondo*/
+    font-family: monospace;
+    color: #ffffff; /* color de las letras*/  
+    padding: 4px; /*top,bottom,left,right para donde se estira*/
+    text-decoration: none;
+    font-size: 2em; /* tamaño de las letras*/
+    display: inline-block;/*espacios*/
+    margin: 0.5em;
+}
 
 header { 
     height: 10vh;
     position: relative;
     grid-area: header;
-    left: 25%;
+    left: 25.5%;
     width: 73.5vw;
     font-size: 2em;
     display: flex;
@@ -79,7 +110,7 @@ article{
     top: -1.5em;
 }
 
-.j1,.j2{
+#j1,#j2{
     position: absolute;
     width: 1vw;
     height: 12vh;
@@ -91,19 +122,19 @@ article{
     border-radius: 1em;
 }
 
-.j1{
+#j1{
     top: 40%;
     left: 15%;
 }
 
-.j2{
+#j2{
     top: 40%;
-    left: 85%;
+    left: 83%;
 }
 
 #cajagrande{
     position: relative;
-    width: 72vw;
+    width: 61em;
     height: 73vh;
     left: 50%;
     top: 50%;
@@ -145,7 +176,7 @@ footer {
     'side content content'
     'footer footer footer';
 }
-.box{
+#box{
     position: relative;
     background: repeating-conic-gradient(from var(--a), #520000 80%, #cf0000 90%, transparent 5%,
     transparent 70%,#ff0000 100%);
@@ -168,18 +199,7 @@ footer {
     }
 }
 
-.box::before{
-    content: '';
-    position: absolute;
-    right: 0%;
-    width: 100%;
-    height: 100%;
-    background: repeating-conic-gradient(from var(--a), #520000 80%, #cf0000 90%, transparent 5%,
-    transparent 70%,#ff0000 100%);
-    animation: animate 4s linear infinite;
-    animation-delay: 0s;
-    border-radius: 1em;
-}
+
 
 .separacion{
     left: 50%;
@@ -208,39 +228,6 @@ footer {
     color: rgb(0, 0, 0);
 }
 
-
-
-.boton {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-image: -webkit-linear-gradient(top, #000000, #000000);
-    background-image: linear-gradient(to bottom, #ff0000, #000000);/*primero degrade del boton y el segundo como termina el degrade */ 
-    border-radius: 15px;/*borde del boton*/
-    box-shadow: 3px 3px 3px 3px #980000; /* color y tamaño de la luz de fondo*/
-    font-family: monospace;
-    color: #ffffff; /* color de las letras*/  
-    padding: 8px; /*top,bottom,left,right para donde se estira*/
-    text-decoration: none;
-    font-size: 10em; /* tamaño de las letras*/
-    display: inline-block;/*espacios*/
-    margin: -0.5em;
-}
-.boton:hover {
-    background-image: -webkit-linear-gradient(top, #000000, #000000);
-    background-image: linear-gradient(to bottom, #000000,#ff0000);
-    text-decoration: none;
-    }
-.target {
-    transition-property: font-size;
-    transition-duration: 1s;
-}
-
-.target:hover {
-    font-size: 2.3em;
-}
-
 .scroll-div{
     width: 350px;
     height: 360px;
@@ -252,25 +239,12 @@ footer {
 overflow-y: scroll;
 }
 
-#remarcar{
-    border: 1px solid rgb(255, 0, 0);
+.remarcar{
+    border: 3px solid rgb(255, 0, 0);
     border-radius: 1.5em;
-    border-width: 3px;
-    border-style: solid;
     width: 325px;
     height: 200px;
 }
-
-
-#remarcar2{
-    border: 1px solid rgb(255, 0, 0);
-    border-radius: 1.5em;
-    border-width: 3px;
-    border-style: solid;
-    width: 325px;
-    height: 120px;
-}
-
 
 #flex-container {
     position: relative;
@@ -297,27 +271,6 @@ overflow-y: scroll;
     align-items: center;
 }
 
-#puntos{
-    position: relative;
-    text-align: center;
-    background-image: -webkit-linear-gradient(top, #000000, #000000);
-    background-image: linear-gradient(to bottom, #ff0000, #000000);/*primero degrade del boton y el segundo como termina el degrade */ 
-    border-radius: 15px;/*borde del boton*/
-    color: #ffffff; /* color de las letras*/  
-    padding: 8px; /*top,bottom,left,right para donde se estira*/
-    text-decoration: none;
-    font-size: 2.2em; /* tamaño de las letras*/
-    display: inline-block;/*espacios*/
-    margin: 5px 10px;
-}
-
-#puntos:hover {
-    background-image: -webkit-linear-gradient(top, #000000, #000000);
-    background-image: linear-gradient(to bottom, #000000,#ff0000);
-    text-decoration: none;
-    box-shadow: 3px 3px 3px 3px #980000; /* color y tamaño de la luz de fondo*/
-}
-
 
 
 #tipos{
@@ -338,28 +291,20 @@ input{
     top: -1.1em;
 }
 
-h2{
+.nom{
     text-decoration: none;
     position: relative;
     top: -0.8em;
     text-align: center;
     -webkit-text-stroke: 1px rgb(255, 0, 0);
-    text-shadow:0 0 0.3em rgb(255, 0, 0), 0 0 0.3em rgb(255, 0, 0);/* color de la luz*/
-    font-size: 2em;
-    color: rgb(0, 0, 0);
-}
-
-.volumenes{
-    text-decoration: none;
-    position: relative;
-    top: -1.3em;
-    margin-bottom: 1em;
-    text-align: center;
-    -webkit-text-stroke: 0.5px rgb(255, 0, 0);
     text-shadow:0 0 0.1em rgb(255, 0, 0), 0 0 0.1em rgb(255, 0, 0);/* color de la luz*/
     font-size: 2em;
     color: rgb(0, 0, 0);
 }
+
+/*rgb(0, 0, 255)*/
+
+
 
 .boton {
     position: relative;
@@ -381,7 +326,7 @@ h2{
     background-image: -webkit-linear-gradient(top, #000000, #000000);
     background-image: linear-gradient(to bottom, #000000,#ff0000);
     text-decoration: none;
-    }
+}
 .target {
     transition-property: font-size;
     transition-duration: 1s;
@@ -436,5 +381,5 @@ h2{
 }
 
 label{
-    color: rgb(255, 0, 0) ;
+    color: rgb(255, 0, 0);
 }

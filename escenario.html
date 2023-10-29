@@ -12,13 +12,14 @@
     <div class="grid-container">
         <header id="jugadores">
             <div class="letra">JUGADOR 1</div>
-            <div class="puntos letra">1-1</div>
+            <div class="puntos letra"></div>
+            <div class="puntos letra"></div>
             <div class="letra">JUGADOR 2</div>
         </header>
 
-        <article class="box">
+        <article id="box">
             <div id="cajagrande">
-                <div class="j1"></div>
+                <div id="j1"></div>
                 <div class="separacion">
                     <div class="palitos"></div>
                     <div class="palitos"></div>
@@ -28,8 +29,7 @@
                     <div class="palitos"></div>
                     <div class="palitos"></div>
                 </div>
-                <div id="ball"></div>
-                <div class="j2"></div>
+                <div id="j2"></div>
             </div>
     </article>
         
@@ -42,8 +42,15 @@
                         <br>
                         <br>
                     <div class="cajaotros" >
-                        <div id="remarcar">
-                            <h2>accesibilidad</h2>
+                        <div class="remarcar" id="puntos">
+                            <h2 class="nom">puntos para ganar</h2>
+                                <button class="botones" id="5">5</button>
+                                <button class="botones" id="10">10</button>
+                                <button class="botones" id="15">15</button>
+                                <button class="botones" id="20">20</button>
+                        </div>
+                        <div class="remarcar">
+                            <h2 class="nom">accesibilidad</h2>
                             <div id="tipos">
                                 <div>
                                     <input type="radio" name="tipos" id="deu">
@@ -61,39 +68,15 @@
                                 </div>
                             </div>
                         </div>
-    
-                        <div id="remarcar">
-                            <h2>puntos para ganar</h2>
-                            <div>
-                                <input type="radio" name="puntos" id="cinco">
-                                <label class="dalt" for="cinco">5</label>
-                            </div>
-                            
-                            <div>
-                                <input type="radio" name="puntos" id="diez">
-                                <label class="dalt" for="quince">10</label>
-                            </div>
-                            
-                            <div>
-                                <input type="radio" name="puntos" id="quince">
-                                <label class="dalt" for="diez">15</label>
-                            </div>
-    
-                            <div>
-                                <input type="radio" name="puntos" id="veinte">
-                                <label class="dalt" for="veinte">20</label>
-                            </div>
-                        </div>
-    
-                        <div id="remarcar">
-                            <h2>volumen</h2>
+                        <div class="remarcar">
+                            <h2 class="nom">volumen</h2>
                             <label for="deu" class="volumenes">efectos de sonido</label> </br>
                             <input type="range"></br>
                             <label for="deu" class="volumenes">musica</label> </br>
                             <input type="range">
                         </div>
-                        <div id="remarcar2">
-                            <h2>brillo</h2>
+                        <div class="remarcar">
+                            <h2 class="nom">brillo</h2>
                             <label for="deu" class="volumenes"></label> </br>
                             <input type="range">
                         </div>
@@ -102,7 +85,7 @@
             </div>
         </div>
         
-        <footer id="controles" class="letra">
+        <footer class="letra">
             <div class="marcar"><h1>W:arriba</h1></div>
             <div class="marcar"><h1>S:abajo</h1></div>
             <div class="marcar"><h1>↑:arriba</h1></div>
