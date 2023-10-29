@@ -3,6 +3,7 @@ html {
     max-height: 100%;
 }
 
+
 body {
     cursor: grab;
     text-align: center;
@@ -17,11 +18,12 @@ header,article,aside,footer{
     border: 0px solid white;
 }
 
+/* cajas logicas, vacio son los espacios en blanco y puntoj1 y 2 los puntos de cada jugador */
 .vacio{
     position: relative;
     width: 4.95vw;
     height: 7vh;
-    border: 1px solid orangered;
+    border: 0px solid orangered;
 }
 
 .puntoj1,.puntoj2{
@@ -31,11 +33,11 @@ header,article,aside,footer{
 }
 
 .puntoj1{
-    border: 1px solid white;
+    border: 0px solid white;
 }
 
 .puntoj2{
-    border: 1px solid rgb(255, 0, 212);
+    border: 0px solid rgb(255, 0, 212);
 }
 
 /* width:72vw; height:73vh;*/
@@ -108,6 +110,9 @@ article{
     grid-area: content; 
     border-radius: 1em;
     top: -1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #j1,#j2{
@@ -136,11 +141,9 @@ article{
     position: relative;
     width: 61em;
     height: 73vh;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background: linear-gradient(90deg, #161616, #000000,#161616 );
     border-radius: 10px;
 }

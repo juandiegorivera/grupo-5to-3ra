@@ -121,47 +121,47 @@ createPacBoard();
 document.getElementById("5").addEventListener("click", function() {
         /* cambiar valor a elementos unicos */
     document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #520000 80%, #cf0000 90%, transparent 5%,transparent 70%,#ff0000 100%)';
-    document.getElementById("j1").style.border = '2px solid red';
-    document.getElementById("j2").style.border = '2px solid red';
+    document.getElementById("j1").style.border = '2px solid #ff0000';
+    document.getElementById("j2").style.border = '2px solid #ff0000';
     /* recorrer elementos class */
     /* barritas del medio */
     let palitos = document.getElementsByClassName("palitos");
     for (let i = 0; i < palitos.length; i++) {
-        palitos[i].style.border = '1.5px solid red';
-        palitos[i].style['box-shadow'] = '0 0 0.4em rgb(170, 0, 0)';
+        palitos[i].style.border = '1.5px solid #ff0000';
+        palitos[i].style['box-shadow'] = '0 0 0.4em #ff0000';
     }
     /* bordes de la configuracion */
     let bordes = document.getElementsByClassName("remarcar");
     for (let i = 0; i < bordes.length; i++) {
-        bordes[i].style.border = '3px solid rgb(255, 0, 0)';
+        bordes[i].style.border = '3px solid #ff0000';
     }
     /* color de los controles y jugadores */
     let titulos = document.getElementsByClassName("letra");
     for (let i = 0; i < titulos.length; i++) {
-        titulos[i].style['text-shadow'] = '0 0 0.4em rgb(255, 0, 0), 0 0 0.4em rgb(255, 0, 0)';
-        titulos[i].style['-webkit-text-stroke'] = '1px rgb(255, 0, 0)';
+        titulos[i].style['text-shadow'] = '0 0 0.4em #ff0000, 0 0 0.4em #ff0000';
+        titulos[i].style['-webkit-text-stroke'] = '1px #ff0000';
     }
     /* cambio de color a la configuracion */
     let letraconfig = document.getElementsByClassName("nom");
     for (let i = 0; i < letraconfig.length; i++) {
-        letraconfig[i].style['text-shadow'] = '0 0 0.1em rgb(255, 0, 0), 0 0 0.1em rgb(255, 0, 0)';
-        letraconfig[i].style['-webkit-text-stroke'] = '1px rgb(255, 0, 0)';
+        letraconfig[i].style['text-shadow'] = '0 0 0.1em #ff0000, 0 0 0.1em #ff0000';
+        letraconfig[i].style['-webkit-text-stroke'] = '1px #ff0000';
     }
     /* cambiar color a los botones grandes */
     let botong = document.getElementsByClassName("boton");
     for (let i = 0; i < botong.length; i++) {
         botong[i].style['background-image'] = 'linear-gradient(to bottom, #ff0000, #000000)';
-        botong[i].style['box-shadow'] = '3px 3px 3px 3px #980000';
+        botong[i].style['box-shadow'] = '3px 3px 3px 3px #ff0000';
     }
     /* label */
     let label = document.getElementsByClassName("dalt");
     for (let i = 0; i < label.length; i++) {
-        label[i].style.color = 'rgb(255, 0, 0)';
+        label[i].style.color = '#ff0000';
     }
     /* volumenes */
     let vol = document.getElementsByClassName("volumenes");
     for (let i = 0; i < vol.length; i++) {
-        vol[i].style.color = 'rgb(255, 0, 0)';
+        vol[i].style.color = '#ff0000';
     }
     /* botones de puntos */
     let elegirpuntos = document.getElementsByClassName("botones");
@@ -218,19 +218,113 @@ document.getElementById("10").addEventListener("click", function() {
     for (let i = 0; i < vol.length; i++) {
         vol[i].style.color = 'rgb(0, 8, 255)';
     }
-        /* botones de puntos */
-        let elegirpuntos = document.getElementsByClassName("botones");
-        for (let i = 0; i < elegirpuntos.length; i++) {
-            elegirpuntos[i].style['background-image'] = 'linear-gradient(to bottom, #0004ff, #000000)';
-        }
+    /* botones de puntos */
+    let elegirpuntos = document.getElementsByClassName("botones");
+    for (let i = 0; i < elegirpuntos.length; i++) {
+        elegirpuntos[i].style['background-image'] = 'linear-gradient(to bottom, #0004ff, #000000)';
+    }
 });
 
 document.getElementById("15").addEventListener("click", function() {
+    /* cambiar valor a elementos unicos */
     document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #0c5200 80%, #3bcf00 90%, transparent 5%,transparent 70%,#44ff00 100%)';
-
+    document.getElementById("j1").style.border = '2px solid #3bcf00 ';
+    document.getElementById("j2").style.border = '2px solid #3bcf00';
+    /* recorrer elementos class */
+    /* bordes de la configuracion */
+    let bordes = document.getElementsByClassName("remarcar");
+    for (let i = 0; i < bordes.length; i++) {
+        bordes[i].style.border = '3px solid #3bcf00';
+    }
+    /* color de los controles y jugadores */
+    let titulos = document.getElementsByClassName("letra");
+    for (let i = 0; i < titulos.length; i++) {
+        titulos[i].style['text-shadow'] = '0 0 0.4em #3bcf00, 0 0 0.4em #3bcf00';
+        titulos[i].style['-webkit-text-stroke'] = '1px #3bcf00';
+    }
+    /* cambio de color a la configuracion */
+    let letraconfig = document.getElementsByClassName("nom");
+    for (let i = 0; i < letraconfig.length; i++) {
+        letraconfig[i].style['text-shadow'] = '0 0 0.1em #3bcf00, 0 0 0.1em #3bcf00';
+        letraconfig[i].style['-webkit-text-stroke'] = '1px #3bcf00';
+    }
+    /* barritas del medio */
+    let palitos = document.getElementsByClassName("palitos");
+    for (let i = 0; i < palitos.length; i++) {
+        palitos[i].style.border = '1.5px solid #3bcf00';
+        palitos[i].style['box-shadow'] = '0 0 0.4em #3bcf00';
+    }
+    /* label */
+    let label = document.getElementsByClassName("dalt");
+    for (let i = 0; i < label.length; i++) {
+        label[i].style.color = '#3bcf00';
+    }
+    /* cambiar color a los botones grandes */
+    let botong = document.getElementsByClassName("boton");
+    for (let i = 0; i < botong.length; i++) {
+        botong[i].style['background-image'] = 'linear-gradient(to bottom, #3bcf00, #000000)';
+        botong[i].style['box-shadow'] = '3px 3px 3px 3px #3bcf00';
+    }
+    /* volumenes */
+    let vol = document.getElementsByClassName("volumenes");
+    for (let i = 0; i < vol.length; i++) {
+        vol[i].style.color = '#3bcf00';
+    }
+    /* botones de puntos */
+    let elegirpuntos = document.getElementsByClassName("botones");
+    for (let i = 0; i < elegirpuntos.length; i++) {
+        elegirpuntos[i].style['background-image'] = 'linear-gradient(to bottom, #3bcf00, #000000)';
+    }
 });
 
 document.getElementById("20").addEventListener("click", function() {
-    document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #470052 80%, #9800cf 90%, transparent 5%,transparent 70%,#bb00ff 100%)';
+        /* cambiar valor a elementos unicos */
+        document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #470052 80%, #9800cf 90%, transparent 5%,transparent 70%,#bb00ff 100%)';
+        document.getElementById("j1").style.border = '2px solid #9800cf';
+        document.getElementById("j2").style.border = '2px solid #9800cf';
+        /* recorrer elementos class */
+        /* bordes de la configuracion */
+        let bordes = document.getElementsByClassName("remarcar");
+        for (let i = 0; i < bordes.length; i++) {
+            bordes[i].style.border = '3px solid #9800cf';
+        }
+        /* color de los controles y jugadores */
+        let titulos = document.getElementsByClassName("letra");
+        for (let i = 0; i < titulos.length; i++) {
+            titulos[i].style['text-shadow'] = '0 0 0.4em #9800cf, 0 0 0.4em #9800cf';
+            titulos[i].style['-webkit-text-stroke'] = '1px #9800cf';
+        }
+        /* cambio de color a la configuracion */
+        let letraconfig = document.getElementsByClassName("nom");
+        for (let i = 0; i < letraconfig.length; i++) {
+            letraconfig[i].style['text-shadow'] = '0 0 0.1em #9800cf, 0 0 0.1em #9800cf';
+            letraconfig[i].style['-webkit-text-stroke'] = '1px #9800cf';
+        }
+        /* barritas del medio */
+        let palitos = document.getElementsByClassName("palitos");
+        for (let i = 0; i < palitos.length; i++) {
+            palitos[i].style.border = '1.5px solid #9800cf';
+            palitos[i].style['box-shadow'] = '0 0 0.4em #9800cf';
+        }
+        /* label */
+        let label = document.getElementsByClassName("dalt");
+        for (let i = 0; i < label.length; i++) {
+            label[i].style.color = '#9800cf';
+        }
+        /* cambiar color a los botones grandes */
+        let botong = document.getElementsByClassName("boton");
+        for (let i = 0; i < botong.length; i++) {
+            botong[i].style['background-image'] = 'linear-gradient(to bottom, #9800cf, #000000)';
+            botong[i].style['box-shadow'] = '3px 3px 3px 3px #9800cf';
+        }
+        /* volumenes */
+        let vol = document.getElementsByClassName("volumenes");
+        for (let i = 0; i < vol.length; i++) {
+            vol[i].style.color = '#9800cf';
+        }
+        /* botones de puntos */
+        let elegirpuntos = document.getElementsByClassName("botones");
+        for (let i = 0; i < elegirpuntos.length; i++) {
+            elegirpuntos[i].style['background-image'] = 'linear-gradient(to bottom, #9800cf, #000000)';
+        }
 });
-
