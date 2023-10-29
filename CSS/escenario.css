@@ -69,10 +69,17 @@ header,article,aside,footer{
     font-family: monospace;
     color: #ffffff; /* color de las letras*/  
     padding: 4px; /*top,bottom,left,right para donde se estira*/
-    text-decoration: none;
     font-size: 2em; /* tamaño de las letras*/
     display: inline-block;/*espacios*/
     margin: 0.5em;
+    transition-property: font-size;
+    transition-duration: 1s;
+}
+
+.botones:hover {
+    background-image: -webkit-linear-gradient(top, #000000, #000000);
+    background-image: linear-gradient(to bottom, #000000,#ff0000);
+    font-size: 2.7em;
 }
 
 header { 
@@ -305,7 +312,7 @@ input{
     color: rgb(0, 0, 0);
 }
 
-/*rgb(0, 0, 255)*/
+
 
 
 
@@ -324,20 +331,16 @@ input{
     font-size: 2.2em; /* tamaño de las letras*/
     display: inline-block;/*espacios*/
     margin: 5px 5px;
+    transition-property: font-size;
+    transition-duration: 1s;
 }
 .boton:hover {
     background-image: -webkit-linear-gradient(top, #000000, #000000);
     background-image: linear-gradient(to bottom, #000000,#ff0000);
     text-decoration: none;
-}
-.target {
-    transition-property: font-size;
-    transition-duration: 1s;
-}
-
-.target:hover {
     font-size: 3.2em;
 }
+
 
 /*celulares*/
 @media only screen and (max-width: 480px) {}
