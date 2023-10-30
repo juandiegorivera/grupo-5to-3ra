@@ -119,10 +119,12 @@ createPacBoard();
 
 
 document.getElementById("5").addEventListener("click", function() {
-        /* cambiar valor a elementos unicos */
+    /* cambiar valor a elementos unicos */
     document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #520000 80%, #cf0000 90%, transparent 5%,transparent 70%,#ff0000 100%)';
-    document.getElementById("j1").style.border = '2px solid #ff0000';
-    document.getElementById("j2").style.border = '2px solid #ff0000';
+    document.getElementById("j1").style.background = '#ff0000';
+    document.getElementById("j2").style.background = '#ff0000';
+    document.getElementById("cajaverdadera1").style.border = '2px solid #ff0000';
+    document.getElementById("cajaverdadera2").style.border = '2px solid #ff0000';
     /* recorrer elementos class */
     /* barritas del medio */
     let palitos = document.getElementsByClassName("palitos");
@@ -157,6 +159,8 @@ document.getElementById("5").addEventListener("click", function() {
     let label = document.getElementsByClassName("dalt");
     for (let i = 0; i < label.length; i++) {
         label[i].style.color = '#ff0000';
+        label[i].style['text-shadow'] = '0 0 0.01em #ff0000, 0 0 0.01em #ff0000';
+        label[i].style['-webkit-text-stroke'] = '0.01px #ff0000';
     }
     /* volumenes */
     let vol = document.getElementsByClassName("volumenes");
@@ -176,8 +180,10 @@ document.getElementById("5").addEventListener("click", function() {
 document.getElementById("10").addEventListener("click", function() {
     /* cambiar valor a elementos unicos */
     document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #000152 80%, #000acf 90%, transparent 5%,transparent 70%,#0008ff 100%)';
-    document.getElementById("j1").style.border = '2px solid blue';
-    document.getElementById("j2").style.border = '2px solid blue';
+    document.getElementById("j1").style.background = 'blue';
+    document.getElementById("j2").style.background = 'blue';
+    document.getElementById("cajaverdadera1").style.border = '2px solid #0004ff';
+    document.getElementById("cajaverdadera2").style.border = '2px solid #0004ff';
     /* recorrer elementos class */
     /* bordes de la configuracion */
     let bordes = document.getElementsByClassName("remarcar");
@@ -187,31 +193,33 @@ document.getElementById("10").addEventListener("click", function() {
     /* color de los controles y jugadores */
     let titulos = document.getElementsByClassName("letra");
     for (let i = 0; i < titulos.length; i++) {
-        titulos[i].style['text-shadow'] = '0 0 0.4em rgb(0, 0, 255), 0 0 0.4em rgb(0, 0, 255)';
-        titulos[i].style['-webkit-text-stroke'] = '1px rgb(0, 0, 255)';
+        titulos[i].style['text-shadow'] = '0 0 0.4em #0004ff, 0 0 0.4em #0004ff';
+        titulos[i].style['-webkit-text-stroke'] = '1px #0004ff';
     }
     /* cambio de color a la configuracion */
     let letraconfig = document.getElementsByClassName("nom");
     for (let i = 0; i < letraconfig.length; i++) {
-        letraconfig[i].style['text-shadow'] = '0 0 0.1em rgb(0, 0, 255), 0 0 0.1em rgb(0, 0, 255)';
-        letraconfig[i].style['-webkit-text-stroke'] = '1px rgb(0, 0, 255)';
+        letraconfig[i].style['text-shadow'] = '0 0 0.1em #0004ff, 0 0 0.1em #0004ff';
+        letraconfig[i].style['-webkit-text-stroke'] = '1px #0004ff';
     }
     /* barritas del medio */
     let palitos = document.getElementsByClassName("palitos");
     for (let i = 0; i < palitos.length; i++) {
         palitos[i].style.border = '1.5px solid blue';
-        palitos[i].style['box-shadow'] = '0 0 0.4em rgb(0, 3, 170)';
+        palitos[i].style['box-shadow'] = '0 0 0.4em #0004ff';
     }
     /* label */
     let label = document.getElementsByClassName("dalt");
     for (let i = 0; i < label.length; i++) {
-        label[i].style.color = 'rgb(0, 8, 255)';
+        label[i].style.color = '#0004ff';
+        label[i].style['text-shadow'] = '0 0 0.01em #0004ff, 0 0 0.01em #0004ff';
+        label[i].style['-webkit-text-stroke'] = '0.01px #0004ff';
     }
     /* cambiar color a los botones grandes */
     let botong = document.getElementsByClassName("boton");
     for (let i = 0; i < botong.length; i++) {
         botong[i].style['background-image'] = 'linear-gradient(to bottom, #0004ff, #000000)';
-        botong[i].style['box-shadow'] = '3px 3px 3px 3px #000098';
+        botong[i].style['box-shadow'] = '3px 3px 3px 3px #0004ff';
     }
     /* volumenes */
     let vol = document.getElementsByClassName("volumenes");
@@ -228,8 +236,10 @@ document.getElementById("10").addEventListener("click", function() {
 document.getElementById("15").addEventListener("click", function() {
     /* cambiar valor a elementos unicos */
     document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #0c5200 80%, #3bcf00 90%, transparent 5%,transparent 70%,#44ff00 100%)';
-    document.getElementById("j1").style.border = '2px solid #3bcf00 ';
-    document.getElementById("j2").style.border = '2px solid #3bcf00';
+    document.getElementById("j1").style.background = '#3bcf00';
+    document.getElementById("j2").style.background = '#3bcf00';
+    document.getElementById("cajaverdadera1").style.border = '2px solid #3bcf00';
+    document.getElementById("cajaverdadera2").style.border = '2px solid #3bcf00';
     /* recorrer elementos class */
     /* bordes de la configuracion */
     let bordes = document.getElementsByClassName("remarcar");
@@ -258,6 +268,8 @@ document.getElementById("15").addEventListener("click", function() {
     let label = document.getElementsByClassName("dalt");
     for (let i = 0; i < label.length; i++) {
         label[i].style.color = '#3bcf00';
+        label[i].style['text-shadow'] = '0 0 0.01em #3bcf00, 0 0 0.01em #3bcf00';
+        label[i].style['-webkit-text-stroke'] = '0.01px #3bcf00';
     }
     /* cambiar color a los botones grandes */
     let botong = document.getElementsByClassName("boton");
@@ -280,8 +292,10 @@ document.getElementById("15").addEventListener("click", function() {
 document.getElementById("20").addEventListener("click", function() {
         /* cambiar valor a elementos unicos */
         document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #470052 80%, #9800cf 90%, transparent 5%,transparent 70%,#bb00ff 100%)';
-        document.getElementById("j1").style.border = '2px solid #9800cf';
-        document.getElementById("j2").style.border = '2px solid #9800cf';
+        document.getElementById("j1").style.background = '#9800cf';
+        document.getElementById("j2").style.background = '#9800cf';
+        document.getElementById("cajaverdadera1").style.border = '2px solid #9800cf';
+        document.getElementById("cajaverdadera2").style.border = '2px solid #9800cf';
         /* recorrer elementos class */
         /* bordes de la configuracion */
         let bordes = document.getElementsByClassName("remarcar");
@@ -310,6 +324,8 @@ document.getElementById("20").addEventListener("click", function() {
         let label = document.getElementsByClassName("dalt");
         for (let i = 0; i < label.length; i++) {
             label[i].style.color = '#9800cf';
+            label[i].style['text-shadow'] = '0 0 0.01em #9800cf, 0 0 0.01em #9800cf';
+            label[i].style['-webkit-text-stroke'] = '0.01px #9800cf';
         }
         /* cambiar color a los botones grandes */
         let botong = document.getElementsByClassName("boton");
