@@ -32,24 +32,6 @@ header,article,aside,footer{
     height: 7vh;
 }
 
-.puntoj1{
-    border: 1px solid white;
-}
-
-.puntoj2{
-    border: 1px solid rgb(255, 0, 212);
-}
-
-/* width:72vw; height:73vh;*/
-.wall{
-    position: relative;
-    border: 1px solid white;
-    width: 30px;
-    height: 15px;
-}
-
-
-
 .botones{
     position: relative;
     align-items: center;

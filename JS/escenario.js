@@ -318,7 +318,19 @@ jQuery(document).ready(function($) {
         h = cajagrande.height() - pelota.height();
         contador1=0;
         contador2=0;
-
+        limitePuntuacion = 5;
+        document.getElementById("5").addEventListener("click", function () {
+            limitePuntuacion = 5;
+        });
+        document.getElementById("10").addEventListener("click", function () {
+            limitePuntuacion = 10;
+        });
+        document.getElementById("15").addEventListener("click", function () {
+            limitePuntuacion = 15;
+        });
+        document.getElementById("20").addEventListener("click", function () {
+            limitePuntuacion = 20;
+        });
     // Variables para almacenar la dirección en x e y
     var direccionX = -1, // Cambié el valor inicial a -1 para que la pelota se mueva hacia la izquierda
         direccionY = 1,
@@ -373,15 +385,35 @@ jQuery(document).ready(function($) {
             nuevaPosX + pelota.width() >= j2.position().left && nuevaPosX <= j2.position().left + j2.width()) {
             direccionX = -1; // Cambiar dirección hacia la izquierda
         }
-
+        function verificarGanador() {
+            if (contador1 == limitePuntuacion) {
+                alert("¡Jugador 2 ha ganado!");
+                pelota = $('#pelot');
+                contador1=0;
+                puntoj1[0].textContent = contador1; 
+                contador2=0;
+                puntoj1[0].textContent = contador1; 
+            } else if (contador2 == limitePuntuacion) {
+                alert("¡Jugador 1 ha ganado!");
+                pelota = $('#pelot');
+                contador1=0;
+                puntoj1[0].textContent = contador1; 
+                contador2=0;
+                puntoj1[0].textContent = contador1; 
+            }
+        }
         // Mover la pelota a la nueva posición con una cantidad de píxeles (paso)
         pelota.css({
             left: nuevaPosX + "px",
             top: nuevaPosY + "px"
         });
-    }, 20); // Actualizar la posición de la pelota cada 25 ms
+        // Verificar si alguien ha ganado y reiniciar el juego si es necesario
+        verificarGanador();
+        
+    }, 20); // Actualizar la posición de la pelota cada 20 ms
 });
 
 
 
 
+/*                 $("#score").html(limitePuntuacion+"-"+limitePuntuacion); */
