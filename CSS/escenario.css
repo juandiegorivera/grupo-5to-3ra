@@ -19,13 +19,13 @@ header,article,aside,footer{
 }
 
 /* cajas logicas, vacio son los espacios en blanco y puntoj1 y 2 los puntos de cada jugador */
-.vacio{
-    position: relative;
-    width: 4.95vw;
-    height: 7vh;
-    border: 0px solid orangered;
-}
 
+#puntajes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .puntoj1,.puntoj2{
     position: relative;
     width: 4.95vw;
@@ -33,11 +33,11 @@ header,article,aside,footer{
 }
 
 .puntoj1{
-    border: 0px solid white;
+    border: 1px solid white;
 }
 
 .puntoj2{
-    border: 0px solid rgb(255, 0, 212);
+    border: 1px solid rgb(255, 0, 212);
 }
 
 /* width:72vw; height:73vh;*/
@@ -46,13 +46,6 @@ header,article,aside,footer{
     border: 1px solid white;
     width: 30px;
     height: 15px;
-}
-#puntos > div{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-around ;
 }
 
 

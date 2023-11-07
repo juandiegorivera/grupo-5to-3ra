@@ -67,53 +67,6 @@ jQuery(document).ready(function ($) {
 });
 
 
-const grid = document.querySelector("#cajagrande");
-const scoreDisplay = document.getElementById("vacio");
-let vacio = 0;
-const squares = [];
-
-// 0 - pac-dots
-// 1 - wall
-// 2 - ghost-lair
-// 3 - power-pellet
-// 4 - empty
-const layout = [
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
-];
-
-function createPacBoard() {
-    if (!grid) {
-        console.error('El elemento grid no existe');
-        return;
-    }
-
-    for (let i = 0; i < layout.length; i++) {
-        const square = document.createElement("cajagrande");
-        grid.appendChild(square);
-        squares.push(square);
-
-
-        // añadiendo las clases según el layout
-        if (layout[i] === 0) {
-            square.classList.add("vacio");
-        } else if (layout[i] === 1) {
-            square.classList.add("puntoj1");
-        } else if (layout[i] === 2) {
-            square.classList.add("puntoj2");
-        }
-    }
-}
-
-createPacBoard();
 
 
 
@@ -363,6 +316,8 @@ jQuery(document).ready(function($) {
         // Calcular ancho y alto
         w = cajagrande.width() - pelota.width(),
         h = cajagrande.height() - pelota.height();
+        contador1=0;
+        contador2=0;
 
     // Variables para almacenar la dirección en x e y
     var direccionX = -1, // Cambié el valor inicial a -1 para que la pelota se mueva hacia la izquierda
@@ -383,8 +338,19 @@ jQuery(document).ready(function($) {
         if (nuevaPosX <= 0) {
             nuevaPosX = 0;
             direccionX = 1; // Cambiar dirección hacia la derecha sumar jugador 2
-            console.log("aca estoy");
+            function cambiarpuntoj1() {
+                contador1+=1
+                var puntoj1 = document.getElementsByClassName("puntoj2");
+                puntoj1[0].textContent = contador1; // Asignar el valor de direccionX al contenido del primer elemento con la clase "puntoj1"
+            }
+            cambiarpuntoj1();
         } else if (nuevaPosX >= w) {
+            function cambiarpuntoj2() {
+                contador2+=1
+                var puntoj2 = document.getElementsByClassName("puntoj1");
+                puntoj2[0].textContent = contador2; // Asignar el valor de direccionX al contenido del primer elemento con la clase "puntoj1"
+            }
+            cambiarpuntoj2();
             nuevaPosX = w;
             direccionX = -1; // Cambiar dirección hacia la izquierda 
         }
@@ -413,85 +379,9 @@ jQuery(document).ready(function($) {
             left: nuevaPosX + "px",
             top: nuevaPosY + "px"
         });
-    }, 15); // Actualizar la posición de la pelota cada 25 ms
+    }, 20); // Actualizar la posición de la pelota cada 25 ms
 });
 
 
 
 
-
-
-/* 
-const cajagrande = document.getElementById('cajagrande')
-cajagrande.width = window.innerWidth
-cajagrande.height = window.innerHeight
-const ctx = cajagrande.getContext('2d')
-
-const pelota =  document.getElementById('pelota');
-
-pelota.posY = 100;
-pelota.y = 100;
-pelota.vspeed = 10;
-pelota.hspeed = 10;
-pelota = 10;
-
-
-
-
-setInterval (() => {
-
-    ctx.clearRect(0, 0, cajagrande.width(), cajagrande.height())
-    //actualización de dirección
-    pelota.posY += pelota.hspeed
-    pelota.y += pelota.vspeed
-
-    //colición abajo y arriba
-    if(pelota.y + pelota >= cajagrande.height || pelota.y - pelota <= 0)
-        pelota.vspeed = -pelota.vspeed
-    
-    //colición derecha e izquierda
-    if(pelota.posY + pelota >= cajagrande.width || pelota.posY - pelota <= 0)
-        pelota.hspeed = -pelota.hspeed
-    
-    //dibujar
-    ctx.beginPath()
-    ctx.arc(pelota.posY, pelota.y, pelota, 0, 2 * Math.PI)
-    ctx.fillstyle = pelota.color
-    ctx.fill()
-}, 1000 / 60)
-*/
-
-
-/* jQuery(document).ready(function($) {
-    // Obtener elementos
-    var cajagrande = $('#cajagrande'),
-        pelota = $('#pelota'),
-        // Calcular ancho y alto
-        w = cajagrande.width() - pelota.width(),
-        h = cajagrande.height() - pelota.height();
-
-    // Variable para almacenar la dirección en x e y
-    var direccionX = 1,
-        direccionY = 1;
-
-    // Establecer intervalo para actualizar la posición
-    setInterval(function() {
-        // Calcular posiciones actuales en eje x e y
-        var posX = pelota.position().left,
-            posY = pelota.position().top;
-
-        // Cambiar la dirección en x e y si la pelota colisiona con un borde
-        if (posX <= 0 || posX >= w) {
-            direccionX = -direccionX;
-        }
-        if (posY <= 0 || posY >= h) {
-            direccionY = -direccionY;
-        }
-
-        // Mover la pelota en la nueva dirección con animación suave
-        pelota.animate({
-            left: posX + (direccionX * 50), // Multiplicar la dirección en x por 5 para que la pelota se mueva más rápido
-            top: posY + (direccionY * 50) // Multiplicar la dirección en y por 5 para que la pelota se mueva más rápido
-        }, 100); // Reducir el tiempo de animación a 100 ms para que la pelota se mueva más rápido
-    }, 100); // Actualizar la posición de la pelota cada 1000 ms (1 segundo)
-}); */
