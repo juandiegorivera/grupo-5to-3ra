@@ -306,7 +306,6 @@ document.getElementById("20").addEventListener("click", function () {
     }
 });
 
-
 jQuery(document).ready(function($) {
     // Obtener elementos
     var cajagrande = $('#cajagrande'),
@@ -407,8 +406,14 @@ jQuery(document).ready(function($) {
             left: nuevaPosX + "px",
             top: nuevaPosY + "px"
         });
-    }, 15); // Actualizar la posición de la pelota cada 25 ms
+        // Verificar si alguien ha ganado y reiniciar el juego si es necesario
+        verificarGanador();
+        
+    }, 20); // Actualizar la posición de la pelota cada 20 ms
 });
+
+
+/*                 $("#score").html(limitePuntuacion+"-"+limitePuntuacion); */ 
 
 /* DALTONISMO  */
 /* deuteranomalia/protanopia (nivel 1) */
