@@ -278,8 +278,9 @@ overflow-y: scroll;
     border: 3px solid #ff0000;
     border-radius: 1.5em;
     width: 325px;
-    height: 200px;
+    height: 220px;
 }
+
 
 #flex-container {
     position: relative;
@@ -382,5 +383,4 @@ label{
 /*tablets*/
 @media only screen and (max-width: 768px) {
 }
-
 

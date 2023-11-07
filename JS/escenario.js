@@ -417,10 +417,182 @@ jQuery(document).ready(function($) {
 });
 
 
+/* DALTONISMO  */
+/* deuteranomalia/protanopia (nivel 1) */
+document.getElementById("deuprotn1").addEventListener("click", function () {
+    /* cambiar valor a elementos unicos */
+    document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #bdff00 80%, #CBFD3B 90%, transparent 5%,transparent 70%,#DCFF75 100%)';
+    document.getElementById("pelota").style.background = 'linear-gradient(45deg,#000000,#000000, #bdff00, #000000,#000000)';
+    document.getElementById("pelota").style.border = '2px solid #bdff00';
+    document.getElementById("j1").style.background = '#bdff00';
+    document.getElementById("j2").style.background = '#bdff00';
+    document.getElementById("cajaverdadera1").style.border = '2px solid #bdff00';
+    document.getElementById("cajaverdadera2").style.border = '2px solid #BDFF00';
+    /* recorrer elementos class */
+    /* bordes de la configuracion */
+    let bordes = document.getElementsByClassName("remarcar");
+    for (let i = 0; i < bordes.length; i++) {
+        bordes[i].style.border = '3px solid #bdff00';
+    }
+    /* color de los controles y jugadores */
+    let titulos = document.getElementsByClassName("letra");
+    for (let i = 0; i < titulos.length; i++) {
+        titulos[i].style['text-shadow'] = '0 0 0.4em #bdff00, 0 0 0.4em #bdff00';
+        titulos[i].style['-webkit-text-stroke'] = '1px #bdff00';
+    }
+    /* cambio de color a la configuracion */
+    let letraconfig = document.getElementsByClassName("nom");
+    for (let i = 0; i < letraconfig.length; i++) {
+        letraconfig[i].style['text-shadow'] = '0 0 0.1em #bdff00, 0 0 0.1em #bdff00';
+        letraconfig[i].style['-webkit-text-stroke'] = '1px #bdff00';
+    }
+    /* barritas del medio */
+    let palitos = document.getElementsByClassName("palitos");
+    for (let i = 0; i < palitos.length; i++) {
+        palitos[i].style.border = '1.5px solid #bdff00';
+        palitos[i].style['box-shadow'] = '0 0 0.4em #bdff00';
+    }
+    /* label */
+    let label = document.getElementsByClassName("dalt");
+    for (let i = 0; i < label.length; i++) {
+        label[i].style.color = '#bdff00';
+        label[i].style['text-shadow'] = '0 0 0.01em #bdff00, 0 0 0.01em #bdff00';
+        label[i].style['-webkit-text-stroke'] = '0.01px #bdff00';
+    }
+    /* cambiar color a los botones grandes */
+    let botong = document.getElementsByClassName("boton");
+    for (let i = 0; i < botong.length; i++) {
+        botong[i].style['background-image'] = 'linear-gradient(to bottom, #bdff00, #000000)';
+        botong[i].style['box-shadow'] = '3px 3px 3px 3px #bdff00';
+    }
+    /* volumenes */
+    let vol = document.getElementsByClassName("volumenes");
+    for (let i = 0; i < vol.length; i++) {
+        vol[i].style.color = '#bdff00';
+    }
+    /* botones de puntos */
+    let elegirpuntos = document.getElementsByClassName("botones");
+    for (let i = 0; i < elegirpuntos.length; i++) {
+        elegirpuntos[i].style['background-image'] = 'linear-gradient(to bottom, #bdff00, #000000)';
+    }
+});
 
-
-
-
+/* Trinatopia nivel 3 */
+document.getElementById("trin3").addEventListener("click", function () {
+    /* cambiar valor a elementos unicos */
+    document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #00FFF7 80%, #b0fffe 90%, transparent 5%,transparent 70%,#e0ffff 100%)';
+    document.getElementById("pelota").style.background = 'linear-gradient(45deg,#000000,#000000, #00FFF7, #000000,#000000)';
+    document.getElementById("pelota").style.border = '2px solid #00FFF7';
+    document.getElementById("j1").style.background = '#00FFF7';
+    document.getElementById("j2").style.background = '#00FFF7';
+    document.getElementById("cajaverdadera1").style.border = '2px solid #00FFF7';
+    document.getElementById("cajaverdadera2").style.border = '2px solid #00FFF7';
+    /* recorrer elementos class */
+    /* bordes de la configuracion */
+    let bordes = document.getElementsByClassName("remarcar");
+    for (let i = 0; i < bordes.length; i++) {
+        bordes[i].style.border = '3px solid #00FFF7';
+    }
+    /* color de los controles y jugadores */
+    let titulos = document.getElementsByClassName("letra");
+    for (let i = 0; i < titulos.length; i++) {
+        titulos[i].style['text-shadow'] = '0 0 0.4em #00FFF7, 0 0 0.4em #00FFF7';
+        titulos[i].style['-webkit-text-stroke'] = '1px #00FFF7';
+    }
+    /* cambio de color a la configuracion */
+    let letraconfig = document.getElementsByClassName("nom");
+    for (let i = 0; i < letraconfig.length; i++) {
+        letraconfig[i].style['text-shadow'] = '0 0 0.1em #00FFF7, 0 0 0.1em #00FFF7';
+        letraconfig[i].style['-webkit-text-stroke'] = '1px #00FFF7';
+    }
+    /* barritas del medio */
+    let palitos = document.getElementsByClassName("palitos");
+    for (let i = 0; i < palitos.length; i++) {
+        palitos[i].style.border = '1.5px solid #00FFF7';
+        palitos[i].style['box-shadow'] = '0 0 0.4em #00FFF7';
+    }
+    /* label */
+    let label = document.getElementsByClassName("dalt");
+    for (let i = 0; i < label.length; i++) {
+        label[i].style.color = '#00FFF7';
+        label[i].style['text-shadow'] = '0 0 0.01em #00FFF7, 0 0 0.01em #00FFF7';
+        label[i].style['-webkit-text-stroke'] = '0.01px #00FFF7';
+    }
+    /* cambiar color a los botones grandes */
+    let botong = document.getElementsByClassName("boton");
+    for (let i = 0; i < botong.length; i++) {
+        botong[i].style['background-image'] = 'linear-gradient(to bottom, #00FFF7, #000000)';
+        botong[i].style['box-shadow'] = '3px 3px 3px 3px #00FFF7';
+    }
+    /* volumenes */
+    let vol = document.getElementsByClassName("volumenes");
+    for (let i = 0; i < vol.length; i++) {
+        vol[i].style.color = '#00FFF7';
+    }
+    /* botones de puntos */
+    let elegirpuntos = document.getElementsByClassName("botones");
+    for (let i = 0; i < elegirpuntos.length; i++) {
+        elegirpuntos[i].style['background-image'] = 'linear-gradient(to bottom, #00FFF7, #000000)';
+    }
+});
+/* Trinatopia nivel 4 */
+document.getElementById("trin4").addEventListener("click", function () {
+    /* cambiar valor a elementos unicos */
+    document.getElementById("box").style.background = 'repeating-conic-gradient(from var(--a), #520000 80%, #cf0000 90%, transparent 5%,transparent 70%,#ff0000 100%)';
+    document.getElementById("pelota").style.background = 'linear-gradient(45deg,#000000,#000000, #ff0000, #000000,#000000)';
+    document.getElementById("pelota").style.border = '2px solid #ff0000';
+    document.getElementById("j1").style.background = '#ff0000';
+    document.getElementById("j2").style.background = '#ff0000';
+    document.getElementById("cajaverdadera1").style.border = '2px solid #ff0000';
+    document.getElementById("cajaverdadera2").style.border = '2px solid #ff0000';
+    /* recorrer elementos class */
+    /* barritas del medio */
+    let palitos = document.getElementsByClassName("palitos");
+    for (let i = 0; i < palitos.length; i++) {
+        palitos[i].style.border = '1.5px solid #ff0000';
+        palitos[i].style['box-shadow'] = '0 0 0.4em #ff0000';
+    }
+    /* bordes de la configuracion */
+    let bordes = document.getElementsByClassName("remarcar");
+    for (let i = 0; i < bordes.length; i++) {
+        bordes[i].style.border = '3px solid #ff0000';
+    }
+    /* color de los controles y jugadores */
+    let titulos = document.getElementsByClassName("letra");
+    for (let i = 0; i < titulos.length; i++) {
+        titulos[i].style['text-shadow'] = '0 0 0.4em #ff0000, 0 0 0.4em #ff0000';
+        titulos[i].style['-webkit-text-stroke'] = '1px #ff0000';
+    }
+    /* cambio de color a la configuracion */
+    let letraconfig = document.getElementsByClassName("nom");
+    for (let i = 0; i < letraconfig.length; i++) {
+        letraconfig[i].style['text-shadow'] = '0 0 0.1em #ff0000, 0 0 0.1em #ff0000';
+        letraconfig[i].style['-webkit-text-stroke'] = '1px #ff0000';
+    }
+    /* cambiar color a los botones grandes */
+    let botong = document.getElementsByClassName("boton");
+    for (let i = 0; i < botong.length; i++) {
+        botong[i].style['background-image'] = 'linear-gradient(to bottom, #ff0000, #000000)';
+        botong[i].style['box-shadow'] = '3px 3px 3px 3px #ff0000';
+    }
+    /* label */
+    let label = document.getElementsByClassName("dalt");
+    for (let i = 0; i < label.length; i++) {
+        label[i].style.color = '#ff0000';
+        label[i].style['text-shadow'] = '0 0 0.01em #ff0000, 0 0 0.01em #ff0000';
+        label[i].style['-webkit-text-stroke'] = '0.01px #ff0000';
+    }
+    /* volumenes */
+    let vol = document.getElementsByClassName("volumenes");
+    for (let i = 0; i < vol.length; i++) {
+        vol[i].style.color = '#ff0000';
+    }
+    /* botones de puntos */
+    let elegirpuntos = document.getElementsByClassName("botones");
+    for (let i = 0; i < elegirpuntos.length; i++) {
+        elegirpuntos[i].style['background-image'] = 'linear-gradient(to bottom, #ff0000, #000000)';
+    }
+});
 /* 
 const cajagrande = document.getElementById('cajagrande')
 cajagrande.width = window.innerWidth
