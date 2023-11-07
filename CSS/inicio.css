@@ -35,7 +35,6 @@ body {
 .letra{
     text-decoration: none;
     position: relative;
-    
     text-align: center;
     -webkit-text-stroke: 2px rgb(255, 0, 0);
     text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
@@ -93,7 +92,7 @@ div {
     }
     .boton {
         font-size: 1.2em;
-        margin: 2px 2px;
+        margin: 1vw;
     }
     .letra {
         font-size: 2.5em;
@@ -107,6 +106,18 @@ div {
 
 /*tablets*/
 @media (width >= 481px) and (height >= 321px){
+    .boton {
+        border-radius: 10px;/*borde del boton*/
+        box-shadow: 2px 2px 2px 2px #980000; /* color y tamaño de la luz de fondo*/
+        font-family: monospace;
+        color: #ffffff; /* color de las letras*/  
+        padding: 6px; /*top,bottom,left,right para donde se estira*/
+        text-decoration: none;
+        font-size: 2.2em; /* tamaño de las letras*/
+        display: inline-block;/*espacios*/
+        margin: 3px 3px;
+        border: 0px solid #666; /* color y proporcion para el borde del boton */
+    }
     div {
         top: -1em;
         left: 30em;
@@ -116,7 +127,7 @@ div {
         display: inline-block;
     }
     .boton {
-        font-size: 1.5em;
+        font-size: 1.8em;
         margin: 2px 2px;
     }
     .letra {
@@ -125,14 +136,98 @@ div {
         text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
     }
     .target:hover {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 }
 
 @media (width >= 768px) and (height >= 481px){
-}
-/*notebooks*/
-@media only screen and (max-width: 1024px) {}
+    
+    .boton {
+        border-radius: 15px;/*borde del boton*/
+        box-shadow: 3px 3px 3px 3px #980000; /* color y tamaño de la luz de fondo*/
+        font-family: monospace;
+        color: #ffffff; /* color de las letras*/  
+        padding: 8px; /*top,bottom,left,right para donde se estira*/
+        text-decoration: none;
+        font-size: 2.5em; /* tamaño de las letras*/
+        display: inline-block;/*espacios*/
+        margin: 5px 5px;
+        border: 0px solid #666; /* color y proporcion para el borde del boton */
+    }
+    
+    .letra{
+        text-align: center;
+        -webkit-text-stroke: 2px rgb(255, 0, 0);
+        text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
+        font-size: 6em;
+    }
+    .target:hover {
+        font-size: 3.5em;
+    }
+    
+    div {
+        top: 0em;
+        left: 30em;
+    }
 
-/*escritorio*/
-@media only screen and (max-width: 1025px) {}
+}
+
+@media (width >= 1420px) and (height >= 780px) {
+    .boton {
+        border-radius: 25px;/*borde del boton*/
+        box-shadow: 7px 7px 7px 7px #980000; /* color y tamaño de la luz de fondo*/
+        font-family: monospace;
+        color: #ffffff; /* color de las letras*/  
+        padding: 8px; /*top,bottom,left,right para donde se estira*/
+        text-decoration: none;
+        font-size: 4.5em; /* tamaño de las letras*/
+        display: inline-block;/*espacios*/
+        margin: 5px 5px;
+    }
+    
+    .letra{
+        text-align: center;
+        -webkit-text-stroke: 4px rgb(255, 0, 0);
+        text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
+        font-size: 8em;
+    }
+    .target:hover {
+        font-size: 5.5em;
+    }
+    
+    div {
+        top: 0em;
+        left: 30em;
+    }
+
+}
+
+@media (width >= 2000px) and (height >= 1300px) {
+    .boton {
+        border-radius: 45px;/*borde del boton*/
+        box-shadow: 10px 10px 10px 10px #980000; /* color y tamaño de la luz de fondo*/
+        font-family: monospace;
+        color: #ffffff; /* color de las letras*/  
+        padding: 8px; /*top,bottom,left,right para donde se estira*/
+        text-decoration: none;
+        font-size: 8.5em; /* tamaño de las letras*/
+        display: inline-block;/*espacios*/
+        margin: 5px 5px;
+        border: 0px solid #666; /* color y proporcion para el borde del boton */
+    }
+    
+    .letra{
+        text-align: center;
+        -webkit-text-stroke: 6px rgb(255, 0, 0);
+        text-shadow:0 0 0.6em rgb(255, 0, 0), 0 0 0.6em rgb(255, 0, 0);/* color de la luz*/
+        font-size: 12em;
+    }
+    .target:hover {
+        font-size: 9em;
+    }
+    
+    div {
+        top: 0em;
+        left: 30em;
+    }
+}

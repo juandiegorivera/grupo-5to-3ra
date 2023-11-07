@@ -157,15 +157,27 @@ article{
     left: 83%;
 }
 
+#pelota{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 79.2%;
+    border: 2px solid red;
+    background: linear-gradient(45deg,#000000,#000000, #ff0000, #000000,#000000); 
+}
+
 #cajagrande{
     position: relative;
-    width: 61em;
+    width: 71.5vw;
     height: 73vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background: linear-gradient(90deg, #161616, #000000,#161616 );
     border-radius: 10px;
+    overflow: hidden;
 }
 
 footer { 
@@ -364,47 +376,11 @@ label{
 
 
 /*celulares*/
-@media only screen and (max-width: 480px) {}
+@media (width <= 481px) and (height <= 321px){
+}
 
 /*tablets*/
 @media only screen and (max-width: 768px) {
-    .letra{
-        font-size: 4em;
-    }
-    .boton{
-    position: relative;
-    border-radius: 13px;/*borde del boton*/
-    box-shadow: 2px 2px 2px 2px #980000; /* color y tamaño de la luz de fondo*/
-    font-family: monospace;
-    color: #ffffff; /* color de las letras*/  
-    padding: 7px; /*top,bottom,left,right para donde se estira*/
-    text-decoration: none;
-    font-size: 1.5em; /* tamaño de las letras*/
-    display: inline-block;/*espacios*/
-    margin: 2px 2px;
-    }
-    .target:hover{
-        font-size: 2.2em;
-    }
-    h2{
-        font-size: 2em;
-    }
-    .dalt{
-        display: flex;
-        margin-bottom: 1em;
-        font-size: 1em;
-    }
-    .volumenes{
-        font-size: 1.5em;
-        -webkit-text-stroke: 0.2px #ff0000;
-        text-shadow:0 0 0.1em #ff0000, 0 0 0.1em #ff0000;/* color de la luz*/
-    }
-    input{
-        scale: 0.8;
-    }
-    #flex-container{
-        width: 95vw;
-    }
 }
 
 
