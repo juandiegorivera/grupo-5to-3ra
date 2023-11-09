@@ -336,9 +336,6 @@ jQuery(document).ready(function($) {
         document.getElementById("20").addEventListener("click", function () {
             limitePuntuacion = 20;
         });
-        document.onkeyup = function(event) {
-            var key = event.key;
-            if (key === 'ArrowUp') {
                     // Variables para almacenar la dirección en x e y
     var direccionX = -1, // Cambié el valor inicial a -1 para que la pelota se mueva hacia la izquierda
     direccionY = 1,
@@ -412,13 +409,15 @@ setInterval(function() {
     // Verificar si alguien ha ganado y reiniciar el juego si es necesario
     verificarGanador();
 }, 12); // Actualizar la posición de la pelota cada 20 ms
-            }
-        };
-
 });
 
 
-/*                 $("#score").html(limitePuntuacion+"-"+limitePuntuacion); */ 
+/* 
+        document.onkeyup = function(event) {
+            var key = event.key;
+            if (key === 'ArrowUp') {
+
+$("#score").html(limitePuntuacion+"-"+limitePuntuacion); */ 
 
 /* DALTONISMO  */
 /* deuteranomalia/protanopia (nivel 1) */
