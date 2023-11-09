@@ -320,96 +320,101 @@ jQuery(document).ready(function($) {
         limitePuntuacion = 5;
         document.getElementById("5").addEventListener("click", function () {
             limitePuntuacion = 5;
+            contador1=0;
+            contador2=0;
         });
         document.getElementById("10").addEventListener("click", function () {
             limitePuntuacion = 10;
+            contador1=0;
+            contador2=0;
         });
         document.getElementById("15").addEventListener("click", function () {
             limitePuntuacion = 15;
+            contador1=0;
+            contador2=0;
         });
         document.getElementById("20").addEventListener("click", function () {
             limitePuntuacion = 20;
         });
-    // Variables para almacenar la dirección en x e y
+        document.onkeyup = function(event) {
+            var key = event.key;
+            if (key === 'ArrowUp') {
+                    // Variables para almacenar la dirección en x e y
     var direccionX = -1, // Cambié el valor inicial a -1 para que la pelota se mueva hacia la izquierda
-        direccionY = 1,
-        paso = 5; // Número de píxeles que la pelota se moverá en cada iteración
+    direccionY = 1,
+    paso = 5; // Número de píxeles que la pelota se moverá en cada iteración
 
-    // Establecer intervalo para actualizar la posición
-    setInterval(function() {
-        // Calcular posiciones actuales en eje x e y
-        var posX = pelota.position().left,
-            posY = pelota.position().top;
+    
+// Establecer intervalo para actualizar la posición
+setInterval(function() {
+    // Calcular posiciones actuales en eje x e y
+    var posX = pelota.position().left,
+        posY = pelota.position().top;
 
-        // Calcular las nuevas posiciones
-        var nuevaPosX = posX + (direccionX * paso),
-            nuevaPosY = posY + (direccionY * paso);
+    // Calcular las nuevas posiciones
+    var nuevaPosX = posX + (direccionX * paso),
+        nuevaPosY = posY + (direccionY * paso);
 
-        // Verificar colisión con los límites y ajustar la posición si es necesario
-        if (nuevaPosX <= 0) {
-            nuevaPosX = 0;
-            direccionX = 1; // Cambiar dirección hacia la derecha sumar jugador 2
-            function cambiarpuntoj1() {
-                contador1+=1
-                var puntoj1 = document.getElementsByClassName("puntoj2");
-                puntoj1[0].textContent = contador1; // Asignar el valor de direccionX al contenido del primer elemento con la clase "puntoj1"
-            }
-            cambiarpuntoj1();
-        } else if (nuevaPosX >= w) {
-            function cambiarpuntoj2() {
-                contador2+=1
-                var puntoj2 = document.getElementsByClassName("puntoj1");
-                puntoj2[0].textContent = contador2; // Asignar el valor de direccionX al contenido del primer elemento con la clase "puntoj1"
-            }
-            cambiarpuntoj2();
-            nuevaPosX = w;
-            direccionX = -1; // Cambiar dirección hacia la izquierda 
+    // Verificar colisión con los límites y ajustar la posición si es necesario
+    if (nuevaPosX <= 0) {
+        nuevaPosX = 0;
+        direccionX = 1; // Cambiar dirección hacia la derecha sumar jugador 2
+        function cambiarpuntoj1() {
+            contador1+=1
+            var puntoj1 = document.getElementsByClassName("puntoj2");
+            puntoj1[0].textContent = contador1; // Asignar el valor de direccionX al contenido del primer elemento con la clase "puntoj1"
         }
+        cambiarpuntoj1();
+    } else if (nuevaPosX >= w) {
+        function cambiarpuntoj2() {
+            contador2+=1
+            var puntoj2 = document.getElementsByClassName("puntoj1");
+            puntoj2[0].textContent = contador2; // Asignar el valor de direccionX al contenido del primer elemento con la clase "puntoj1"
+        }
+        cambiarpuntoj2();
+        nuevaPosX = w;
+        direccionX = -1; // Cambiar dirección hacia la izquierda 
+    }
 
-        if (nuevaPosY <= 0) {
-            nuevaPosY = 0;
-            direccionY = 1; // Cambiar dirección hacia abajo
-        } else if (nuevaPosY >= h) {
-            nuevaPosY = h;
-            direccionY = -1; // Cambiar dirección hacia arriba
-        }
+    if (nuevaPosY <= 0) {
+        nuevaPosY = 0;
+        direccionY = 1; // Cambiar dirección hacia abajo
+    } else if (nuevaPosY >= h) {
+        nuevaPosY = h;
+        direccionY = -1; // Cambiar dirección hacia arriba
+    }
 
-        // Verificar colisión con los elementos j1 y j2 y ajustar la dirección si es necesario
-        if (nuevaPosY >= j1.position().top && nuevaPosY <= j1.position().top + j1.height() &&
-            nuevaPosX <= j1.position().left + j1.width() && nuevaPosX >= j1.position().left - pelota.width()) {
-            direccionX = 1; // Cambiar dirección hacia la derecha
-        }
+    // Verificar colisión con los elementos j1 y j2 y ajustar la dirección si es necesario
+    if (nuevaPosY >= j1.position().top && nuevaPosY <= j1.position().top + j1.height() &&
+        nuevaPosX <= j1.position().left + j1.width() && nuevaPosX >= j1.position().left - pelota.width()) {
+        direccionX = 1; // Cambiar dirección hacia la derecha
+    }
 
-        if (nuevaPosY >= j2.position().top && nuevaPosY <= j2.position().top + j2.height() &&
-            nuevaPosX + pelota.width() >= j2.position().left && nuevaPosX <= j2.position().left + j2.width()) {
-            direccionX = -1; // Cambiar dirección hacia la izquierda
+    if (nuevaPosY >= j2.position().top && nuevaPosY <= j2.position().top + j2.height() &&
+        nuevaPosX + pelota.width() >= j2.position().left && nuevaPosX <= j2.position().left + j2.width()) {
+        direccionX = -1; // Cambiar dirección hacia la izquierda
+
+    }
+    function verificarGanador() {
+        if (contador1 == limitePuntuacion) {
+            alert("¡Jugador 2 ha ganado!");
+            pelota = $('#pelot');
+        } else if (contador2 == limitePuntuacion) {
+            alert("¡Jugador 1 ha ganado!");
+            pelota = $('#pelot');
         }
-        function verificarGanador() {
-            if (contador1 == limitePuntuacion) {
-                alert("¡Jugador 2 ha ganado!");
-                pelota = $('#pelot');
-                contador1=0;
-                puntoj1[0].textContent = contador1; 
-                contador2=0;
-                puntoj1[0].textContent = contador1; 
-            } else if (contador2 == limitePuntuacion) {
-                alert("¡Jugador 1 ha ganado!");
-                pelota = $('#pelot');
-                contador1=0;
-                puntoj1[0].textContent = contador1; 
-                contador2=0;
-                puntoj1[0].textContent = contador1; 
-            }
-        }
+    }
         // Mover la pelota a la nueva posición con una cantidad de píxeles (paso)
         pelota.css({
             left: nuevaPosX + "px",
             top: nuevaPosY + "px"
         });
-        // Verificar si alguien ha ganado y reiniciar el juego si es necesario
-        verificarGanador();
-        
-    }, 20); // Actualizar la posición de la pelota cada 20 ms
+    // Verificar si alguien ha ganado y reiniciar el juego si es necesario
+    verificarGanador();
+}, 12); // Actualizar la posición de la pelota cada 20 ms
+            }
+        };
+
 });
 
 
