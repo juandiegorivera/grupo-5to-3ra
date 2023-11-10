@@ -395,10 +395,10 @@ jQuery(document).ready(function($) {
                 }
                 function verificarGanador() {
                     if (contador1 == limitePuntuacion) {
-                        alert("¡Jugador 2 ha ganado!");
+                        alert("te domo el jugador 2");
                         pelota = $('#pelot');
                     } else if (contador2 == limitePuntuacion) {
-                        alert("¡Jugador 1 ha ganado!");
+                        alert("te domo el jugador 1");
                         pelota = $('#pelot');
                     }
                 }
@@ -409,7 +409,7 @@ jQuery(document).ready(function($) {
                     });
                 // Verificar si alguien ha ganado y reiniciar el juego si es necesario
                 verificarGanador();
-            }, 12); // Actualizar la posición de la pelota cada 20 ms
+            }, 10); // Actualizar la posición de la pelota cada 20 ms
             }
         }
 });
